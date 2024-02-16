@@ -1,23 +1,13 @@
 <head>
     <title>Simple Addition</title>
     <script>
-    //   function addNumbers() {
-    //     let number1Input = document.getElementById("number1").value;
-    //     let number2Input = document.getElementById("number2").value;
-    //     const response = await fetch("http://locathost:3000/add/" + number1Input + "/" + number2Input);
-    //     const sum = await response.json();
-        
-    //     let sum = Number(number1Input) + Number(number2Input);
-    //     document.getElementById("sum").innerText = sum;
-    //   }
 
-    // hrlloo
-    async function add(){
+    async function addNumbers(){
         const operandInput1 = document.getElementById("number1");
         const operandInput2 = document.getElementById("number2");
         let n = operandInput1.value;
         let m = operandInput2.value;
-        const response = await fetch("http://localhost:3000/add/" + n + "/" + m);
+        const response = await fetch("https://hellobrian1.onrender.com/add/" + n + "/" + m);
         const sum = await response.json();
         document.getElementById("sum").innerText = sum;
     }
@@ -25,12 +15,7 @@
   </head>
   <body>
   <header> Arithmetic</header>
-    <!-- <form>
-      <input id="number1" name="number1" type="number"><br>
-      <input id="number2" name="number2" type="number"><br><br>
-      <input type="button" value="=" onclick="addNumbers()">
-      <label id="sum"></label>
-    </form> -->
+
     <form>
       <label for="number1">Number 1:</label>
       <input id="number1" name="number1" type="number"><br>
